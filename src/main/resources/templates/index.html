@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+
+<div class ="container-fluid text-center" style="background: darkcyan; position: fixed;width: 100%; height: 100%">
+    <h1>Web Crawler</h1>
+
+<!--    <a class="h5" th:href="@{/book/listofbooks}">Library</a>-->
+<!--    <br>-->
+<!--    <a class="h5" th:href="@{/customer/listofcustomers}">Manage Users</a>-->
+<!--    <br>-->
+<!--    <a class="h5" th:href="@{/logout}">Logout</a>-->
+    <br><br><br>
+
+        <label for="inputLink" class="h5">Target URL</label><br>
+        <input type="text" id="inputLink" name="inputLink" size = 50> <br><br>
+        <label for="depth" class="h5">Depth</label><br>
+        <input type="text" id="depth" name="depth" size = 5> <br><br>
+<!--        <label for="fname" class="h5"></label><br>-->
+<!--    <a class="button" type="button" th:href="@{/secondPage}" >Start Crawling!</a>-->
+
+    <a class="h4 mr-3" href="javascript:testfunc()">Start Crawling!</a><br><br><br>
+<!--        <input type="submit" value="Submit" th:href="@{/secondPage}">-->
+    <a href="/downloadJson" class="btn btn-primary">
+        Download JSON File
+    </a>
+</div>
+sahsaas
+
+
+<!--<div id="spinner" class="spinner" style="display:none;">-->
+<!--    <img id="img-spinner" src="spinner.gif" alt="Loading"/>-->
+<!--</div>-->
+</body>
+</html>
+
+
+<script type="text/javascript">
+    //We use the field's id to refer to it and get to its value (the text in it):
+    function  testfunc() {
+        var inputLink = document.getElementById("inputLink").value;
+        var depth = document.getElementById("depth").value;
+        location.href = "/"+inputLink+ "/"+depth;
+    }
+</script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#spinner").bind("ajaxSend", function() {
+            $(this).show();
+        }).bind("ajaxStop", function() {
+            $(this).hide();
+        }).bind("ajaxError", function() {
+            $(this).hide();
+        });
+
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#submit').click(function() {
+            $('#spinner').show();
+        });
+    });
+</script>
