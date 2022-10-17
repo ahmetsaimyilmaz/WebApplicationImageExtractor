@@ -9,20 +9,32 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>WebCrawlerV2</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>WebCrawlerV2</name>
-    <description>WebCrawlerV2</description>
+    <artifactId>webcrawler</artifactId>
+<!--    <version>0.0.1-SNAPSHOT</version>-->
+    <name>Web Crawler Web Application</name>
+<!--    <description>Web Crawler Web Application</description>-->
     <properties>
         <java.version>11</java.version>
     </properties>
-    <distributionManagement>
-        <repository>
-            <id>internal.repo</id>
-            <name>Internal repo</name>
-            <url>file://C:/Users/ahmet.yilmaz/Desktop/SecureCRT v7.1.1.264 x64-20221005T055256Z-001/WebApplicationImageExtractor-master/</url>
-        </repository>
-    </distributionManagement>
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>internal.repo</id>-->
+<!--            <name>Internal repo</name>-->
+<!--            <url>file://C:/Users/ahmet.yilmaz/Desktop/SecureCRT v7.1.1.264 x64-20221005T055256Z-001/WebApplicationImageExtractor-master/</url>-->
+<!--        </repository>-->
+<!--    </distributionManagement>-->
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>archiva.internal</id>-->
+<!--            <name>MAM-EE Repository</name>-->
+<!--            <url>dav:http://archiva.uzay.tubitak.gov.tr/archiva/repository/internal</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>archiva.snapshots</id>-->
+<!--            <name>MAM-EE Snaphots Repository</name>-->
+<!--            <url>dav:http://archiva.uzay.tubitak.gov.tr/archiva/repository/snapshots</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
